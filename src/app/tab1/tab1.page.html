@@ -1,0 +1,19 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="light" mode="ios">
+    <ion-title>
+      Recipe
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list mode="ios">
+    <ion-item *ngFor="let recipe of recipes" [routerLink]="['./', recipe.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="recipe.imageUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>{{recipe.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
